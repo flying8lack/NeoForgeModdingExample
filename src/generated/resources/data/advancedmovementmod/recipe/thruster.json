@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "c:ingots/iron"
+    },
+    "T": {
+      "tag": "advancedmovementmod:titanium_ingots"
+    }
+  },
+  "pattern": [
+    " T ",
+    "TIT",
+    "T T"
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedmovementmod:thruster"
+  }
+}

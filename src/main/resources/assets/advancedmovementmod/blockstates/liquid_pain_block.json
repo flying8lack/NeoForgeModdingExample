@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "advancedmovementmod:block/liquid_pain_block.json"
+    }
+  }
+}

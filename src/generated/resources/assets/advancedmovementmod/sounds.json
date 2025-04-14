@@ -1,0 +1,10 @@
+{
+  "60hz_hum": {
+    "sounds": [
+      {
+        "name": "advancedmovementmod:60hz_hum",
+        "volume": 0.2
+      }
+    ]
+  }
+}

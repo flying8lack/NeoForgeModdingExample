@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "advancedmovementmod:block/thermite_digger_block",
+      "y": 90
+    },
+
+    "facing=north": {
+      "model": "advancedmovementmod:block/thermite_digger_block",
+      "y": 0
+    },
+
+    "facing=west": {
+      "model": "advancedmovementmod:block/thermite_digger_block",
+      "y": 270
+    },
+
+    "facing=south": {
+      "model": "advancedmovementmod:block/thermite_digger_block",
+      "y": 90
+    }
+  }
+}

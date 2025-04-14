@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "advancedmovementmod:block/thermite_digger_block_hole",
+    "side": "advancedmovementmod:block/thermite_digger_block",
+    "top": "advancedmovementmod:block/thermite_digger_block"
+  }
+}

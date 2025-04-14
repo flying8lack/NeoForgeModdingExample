@@ -1,0 +1,70 @@
+//[df-editor]:{"pos":[1346,477],"collapsed":false}
+{
+  //[df-editor]:{"pos":[1058,422],"collapsed":false}
+  "type": "add",
+  "argument1": {
+    //[df-editor]:{"pos":[677,413],"collapsed":false}
+    "type": "interpolated",
+    "argument": {
+      //[df-editor]:{"pos":[625,530],"collapsed":false}
+      "type": "add",
+      "argument1": {
+        //[df-editor]:{"pos":[364,372],"collapsed":false}
+        "type": "add",
+        "argument1": {
+          //[df-editor]:{"pos":[98,263],"collapsed":false}
+          "type": "add",
+          "argument1": {
+            //[df-editor]:{"pos":[52,127],"collapsed":false}
+            "type": "mul",
+            "argument1": {
+              //[df-editor]:{"pos":[-213,70],"collapsed":false}
+              "type": "noise",
+              "noise": "minecraft:erosion",
+              "xz_scale": 8,
+              "y_scale": 0.2
+            },
+            "argument2": 0.5 //[df-editor]:{"pos":[-347,198],"collapsed":false}
+          },
+          "argument2": {
+            //[df-editor]:{"pos":[-191,265],"collapsed":false}
+            "type": "noise",
+            "noise": "minecraft:gravel",
+            "xz_scale": 2,
+            "y_scale": 2.7755575615628914e-17
+          }
+        },
+        "argument2": {
+          //[df-editor]:{"pos":[69,397],"collapsed":false}
+          "type": "mul",
+          "argument1": {
+            //[df-editor]:{"pos":[-217,407],"collapsed":false}
+            "type": "noise",
+            "noise": "minecraft:gravel_layer",
+            "xz_scale": 4,
+            "y_scale": 0.1
+          },
+          "argument2": 0.25 //[df-editor]:{"pos":[-217,572],"collapsed":false}
+        }
+      },
+      "argument2": {
+        //[df-editor]:{"pos":[352.99798583984375,575.47265625],"collapsed":false}
+        "type": "mul",
+        "argument1": {
+          //[df-editor]:{"pos":[80,571],"collapsed":false}
+          "type": "shift",
+          "argument": "minecraft:pillar"
+        },
+        "argument2": 0.125 //[df-editor]:{"pos":[11,732],"collapsed":false}
+      }
+    }
+  },
+  "argument2": {
+    //[df-editor]:{"pos":[953.5194702148438,576.18994140625],"collapsed":false}
+    "type": "y_clamped_gradient",
+    "from_y": 0,
+    "to_y": 100,
+    "from_value": 2,
+    "to_value": -2.5
+  }
+}

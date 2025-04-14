@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "advancedmovementmod:block/coal_processor_block"
+    }
+  }
+}

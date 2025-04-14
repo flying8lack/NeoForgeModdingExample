@@ -1,0 +1,22 @@
+{
+
+  "structures": [
+    {
+      "structure": "advancedmovementmod:sand_trader_stop",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "type": "minecraft:random_spread",
+
+
+    "salt": 1694734080,
+
+
+    "spacing": 12,
+
+
+    "separation": 5
+  }
+}

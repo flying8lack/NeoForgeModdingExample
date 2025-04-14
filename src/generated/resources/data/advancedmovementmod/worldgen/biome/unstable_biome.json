@@ -1,0 +1,146 @@
+{
+  "carvers": {},
+  "downfall": 0.9,
+  "effects": {
+    "ambient_sound": "minecraft:ambient.crimson_forest.loop",
+    "fog_color": 533031,
+    "grass_color": 52785,
+    "sky_color": 21079,
+    "water_color": 16764321,
+    "water_fog_color": 15715745
+  },
+  "features": [
+    [
+      "advancedmovementmod:power_ore"
+    ],
+    [],
+    [
+      "minecraft:large_dripstone"
+    ],
+    [],
+    [],
+    [],
+    [
+      "minecraft:ore_coal_upper",
+      "minecraft:ore_coal_lower",
+      "minecraft:ore_iron_upper",
+      "minecraft:ore_iron_middle",
+      "minecraft:ore_iron_small",
+      "minecraft:ore_gold",
+      "minecraft:ore_gold_lower",
+      "minecraft:ore_redstone",
+      "minecraft:ore_redstone_lower",
+      "minecraft:ore_diamond",
+      "minecraft:ore_diamond_medium",
+      "minecraft:ore_diamond_large",
+      "minecraft:ore_diamond_buried",
+      "minecraft:ore_lapis",
+      "minecraft:ore_lapis_buried",
+      "minecraft:ore_copper",
+      "minecraft:underwater_magma",
+      "minecraft:ore_emerald"
+    ],
+    [
+      "minecraft:dripstone_cluster",
+      "minecraft:pointed_dripstone"
+    ],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
+    ],
+    [
+      "minecraft:kelp_warm"
+    ]
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {
+    "minecraft:guardian": {
+      "charge": 1.0,
+      "energy_budget": 16.0
+    },
+    "minecraft:illusioner": {
+      "charge": 2.0,
+      "energy_budget": 10.0
+    },
+    "minecraft:skeleton": {
+      "charge": 2.0,
+      "energy_budget": 32.0
+    }
+  },
+  "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
+    "axolotls": [],
+    "creature": [
+      {
+        "type": "minecraft:sniffer",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 9
+      },
+      {
+        "type": "minecraft:fox",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 120
+      }
+    ],
+    "misc": [],
+    "monster": [
+      {
+        "type": "minecraft:phantom",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 30
+      },
+      {
+        "type": "minecraft:illusioner",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 40
+      },
+      {
+        "type": "minecraft:skeleton",
+        "maxCount": 8,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "advancedmovementmod:grass_walker_monster_entity",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 10
+      }
+    ],
+    "underground_water_creature": [
+      {
+        "type": "minecraft:glow_squid",
+        "maxCount": 6,
+        "minCount": 4,
+        "weight": 10
+      }
+    ],
+    "water_ambient": [],
+    "water_creature": [
+      {
+        "type": "minecraft:guardian",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 1
+      },
+      {
+        "type": "minecraft:pufferfish",
+        "maxCount": 3,
+        "minCount": 2,
+        "weight": 60
+      }
+    ]
+  },
+  "temperature": 0.68
+}

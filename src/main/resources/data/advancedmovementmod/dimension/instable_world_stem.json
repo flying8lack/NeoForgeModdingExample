@@ -1,0 +1,36 @@
+{
+  "type": "advancedmovementmod:instable_world_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "advancedmovementmod:unstable_biome",
+          "parameters": {
+            "continentalness": 1.0,
+            "depth": 0.4,
+            "erosion": 0.8,
+            "humidity": 0.2,
+            "offset": 0.1,
+            "temperature": 1.0,
+            "weirdness": 0.0
+          }
+        },
+        {
+          "biome": "advancedmovementmod:unstable_biome",
+          "parameters": {
+            "continentalness": 0.9,
+            "depth": 0.05,
+            "erosion": 0.3,
+            "humidity": 0.2,
+            "offset": 0.1,
+            "temperature": 1.0,
+            "weirdness": 0.05
+          }
+        }
+      ]
+    },
+    "settings": "advancedmovementmod:unstable_noise_settings"
+  }
+}

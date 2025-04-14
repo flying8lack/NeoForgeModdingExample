@@ -1,0 +1,8 @@
+{
+  "itemGroup.advancedmovementmod": "Advanced Movement Mod",
+  "block.advancedmovementmod.titanium_ore": "Titanium Ore",
+  "block.advancedmovementmod.thermite_digger_block": "Thermite Digger",
+  "item.advancedmovementmod.titanium_ingot": "Titanium Ingot",
+  "death.attack.pain": "%s had consumed liquid pain"
+
+}

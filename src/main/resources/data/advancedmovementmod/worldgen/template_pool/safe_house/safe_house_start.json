@@ -1,0 +1,26 @@
+{
+
+
+
+  "fallback": "minecraft:empty",
+
+
+  "elements": [
+    {
+
+
+      "weight": 1,
+      "element": {
+
+
+        "location": "advancedmovementmod:safe_house_store",
+
+        "processors": "advancedmovementmod:random_integration_plank",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
