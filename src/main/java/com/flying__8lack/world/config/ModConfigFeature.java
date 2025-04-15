@@ -18,6 +18,8 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.rootplacers.RootPlacer;
 import net.minecraft.world.level.levelgen.feature.rootplacers.RootPlacerType;
@@ -48,6 +50,18 @@ public class ModConfigFeature {
 
         register(context, POWER_ORE, Feature.ORE,
                 new OreConfiguration(world, 6));
+
+
+        register(context, PAIN_TREE, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(Blocks.BIRCH_LOG),
+                    new BendingTrunkPlacer(4, 2, 5, 5,
+                            ConstantInt.of(7)),
+                    BlockStateProvider.simple(Blocks.AIR),
+                    new BlobFoliagePlacer(ConstantInt.of(1),ConstantInt.of(1),1),
+                    new TwoLayersFeatureSize(2, 0, 2)
+                ).forceDirt().build()
+        );
 
 
 

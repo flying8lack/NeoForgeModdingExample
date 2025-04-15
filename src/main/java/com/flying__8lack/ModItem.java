@@ -20,6 +20,9 @@ public class ModItem {
 
     //block items
 
+    public static final DeferredItem<BlockItem> PAIN_SAPLING_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
+            "pain_sapling_block", ModBlock.PAIN_SAPLING);
+
     public static final DeferredItem<BlockItem> COAL_POWER_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
             "coal_power_block", ModBlock.COAL_POWER_BLOCK);
 

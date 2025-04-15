@@ -3,8 +3,11 @@ package com.flying__8lack;
 import com.flying__8lack.blocks.*;
 import com.flying__8lack.blocks.fluids.LiquidPainBlock;
 import com.flying__8lack.blocks.fluids.ModFluids;
+import com.flying__8lack.world.trees.ModTreeGrower;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.levelgen.synth.PerlinSimplexNoise;
 import net.neoforged.bus.api.IEventBus;
@@ -42,6 +45,9 @@ public class ModBlock {
 
     public static final DeferredBlock<Block> NODE_BLOCK = BLOCKS.register("node_block",
             () -> new BlockNode(BlockBehaviour.Properties.of()));
+
+    public static final DeferredBlock<SaplingBlock> PAIN_SAPLING = BLOCKS.register("pain_sapling_block",
+            () -> new SaplingBlock(ModTreeGrower.PAIN_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
 
 

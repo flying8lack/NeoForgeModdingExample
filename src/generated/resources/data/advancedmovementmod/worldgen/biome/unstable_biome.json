@@ -55,16 +55,12 @@
   "has_precipitation": false,
   "spawn_costs": {
     "minecraft:guardian": {
-      "charge": 1.0,
-      "energy_budget": 16.0
+      "charge": 18.0,
+      "energy_budget": 8.0
     },
     "minecraft:illusioner": {
-      "charge": 2.0,
-      "energy_budget": 10.0
-    },
-    "minecraft:skeleton": {
-      "charge": 2.0,
-      "energy_budget": 32.0
+      "charge": 4.0,
+      "energy_budget": 30.0
     }
   },
   "spawners": {
@@ -94,16 +90,16 @@
     "misc": [],
     "monster": [
       {
-        "type": "minecraft:phantom",
+        "type": "minecraft:cave_spider",
         "maxCount": 3,
         "minCount": 1,
-        "weight": 30
+        "weight": 10
       },
       {
         "type": "minecraft:illusioner",
         "maxCount": 2,
         "minCount": 1,
-        "weight": 40
+        "weight": 70
       },
       {
         "type": "minecraft:skeleton",
