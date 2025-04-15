@@ -1,6 +1,9 @@
 package com.flying__8lack.blocks.fluids;
 
 import com.flying__8lack.entity.custom.GrassWalkerMonsterEntity;
+import com.mojang.datafixers.util.Pair;
+import it.unimi.dsi.fastutil.shorts.Short2BooleanMap;
+import it.unimi.dsi.fastutil.shorts.Short2ObjectMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.Entity;
@@ -23,13 +26,6 @@ public abstract class LiquidPainFluid extends BaseFlowingFluid{
         super(properties);
     }
 
-
-
-
-
-    
-
-
     @Override
     public Fluid getFlowing() {
         return ModFluids.LIQUID_PAIN_FLOWING.get();
@@ -38,6 +34,16 @@ public abstract class LiquidPainFluid extends BaseFlowingFluid{
     @Override
     public Fluid getSource() {
         return ModFluids.LIQUID_PAIN.get();
+    }
+
+    @Override
+    public float getExplosionResistance(FluidState state, BlockGetter level, BlockPos pos, Explosion explosion) {
+        return 250.0f;
+    }
+
+    @Override
+    protected int getSlopeDistance(LevelReader level, BlockPos spreadPos, int distance, Direction p_direction, BlockState currentSpreadState, BlockPos sourcePos, Short2ObjectMap<Pair<BlockState, FluidState>> stateCache, Short2BooleanMap waterHoleCache) {
+        return level.getBrightness(LightLayer.SKY, sourcePos) > 8 ? 4 : 6;
     }
 
     public static class Source extends LiquidPainFluid {
@@ -81,5 +87,6 @@ public abstract class LiquidPainFluid extends BaseFlowingFluid{
         public int getAmount(FluidState fluidState) {
             return fluidState.getValue(LEVEL);
         }
+
     }
 }

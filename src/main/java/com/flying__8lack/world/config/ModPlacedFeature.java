@@ -21,7 +21,7 @@ import static com.flying__8lack.world.config.ModOrePlacement.commonOrePlacement;
 
 public class ModPlacedFeature {
     public static final ResourceKey<PlacedFeature> POWER_ORE = registerKey("power_ore");
-    public static final ResourceKey<PlacedFeature> CHEST_CIRCLE = registerKey("chest_circle");
+    public static final ResourceKey<PlacedFeature> PAIN_TREE = registerKey("PAIN_TREE");
     public static void bootstrap(BootstrapContext<PlacedFeature> context){
         HolderGetter<ConfiguredFeature<?, ?>> holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
 

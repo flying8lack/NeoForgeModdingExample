@@ -3,29 +3,16 @@ package com.flying__8lack.blocks.entity;
 import com.flying__8lack.cap.ModCap;
 import com.flying__8lack.util.IDataSharing;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.monster.warden.Warden;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.entity.EntityTypeTest;
-import net.minecraft.world.phys.AABB;
 import net.neoforged.neoforge.capabilities.BlockCapabilityCache;
-import net.neoforged.neoforge.common.util.Lazy;
-import net.neoforged.neoforge.energy.EnergyStorage;
-import net.neoforged.neoforge.energy.IEnergyStorage;
-import net.neoforged.neoforge.items.ItemStackHandler;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.Optional;
 
 public class BlockWardenToyEntity extends BlockEntity {
 
-    private final EnergyStorage energyStorage = new EnergyStorage(4000);
     private BlockCapabilityCache<IDataSharing, Void> capCache;
     public int DELAY = 20;
     private static final int EnergyCost = 1250;

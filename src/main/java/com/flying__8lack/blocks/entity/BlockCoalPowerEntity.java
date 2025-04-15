@@ -32,7 +32,7 @@ import static com.flying__8lack.advancedmovementmod.getLog;
 
 public class BlockCoalPowerEntity extends BlockEntity implements MenuProvider, ICapProvider {
 
-    private final EnergyStorage storage = new EnergyStorage(1_000_000);
+    private final EnergyStorage storage = new EnergyStorage(1_000_000, 0, 6000);
 
     private final ItemStackHandler Input = new ItemStackHandler(1){
         @Override

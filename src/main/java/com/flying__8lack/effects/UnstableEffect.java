@@ -1,6 +1,7 @@
 package com.flying__8lack.effects;
 
 import com.flying__8lack.util.PortalHandle;
+import com.flying__8lack.world.dimensions.ModDimension;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
@@ -40,9 +41,11 @@ public class UnstableEffect extends MobEffect{
             SoundSource.MASTER);
 
     private int tickDuration = 0;
+    private PortalHandle portal = new PortalHandle(ModDimension.INSTABLE_WORLD_LEVEL, 40);
 
     protected UnstableEffect(MobEffectCategory category, int color) {
         super(category, color);
+
         this.addAttributeModifier(Attributes.KNOCKBACK_RESISTANCE,
                 ResourceLocation.fromNamespaceAndPath(MODID, "unstable"), -0.6,
                 AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
@@ -52,6 +55,7 @@ public class UnstableEffect extends MobEffect{
     public void onEffectAdded(LivingEntity livingEntity, int amplifier) {
         if (livingEntity instanceof Player p) {
             PLAY_SOUND.accept(p);
+            this.portal.teleportAsAPortal(p);
         }
 
     }
@@ -66,8 +70,14 @@ public class UnstableEffect extends MobEffect{
 
             if(this.tickDuration % 100 == 0){
                 PLAY_SOUND.accept(p);
-                p.level().gameEvent(p, GameEvent.BLOCK_DESTROY, p.blockPosition());
+
             }
+
+            if(this.tickDuration >= 40 && p.level().dimension() == ModDimension.INSTABLE_WORLD_LEVEL){
+                this.portal.teleportAsAPortal(p);
+            }
+
+
 
         }
 
