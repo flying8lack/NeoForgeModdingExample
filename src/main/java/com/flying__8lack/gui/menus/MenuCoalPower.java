@@ -2,16 +2,17 @@ package com.flying__8lack.gui.menus;
 
 import com.flying__8lack.ModBlock;
 import com.flying__8lack.blocks.entity.BlockCoalPowerEntity;
-import com.flying__8lack.blocks.entity.BlockCoalProcessorEntity;
 import com.flying__8lack.gui.ModMenu;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.*;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.neoforge.items.SlotItemHandler;
-import org.jetbrains.annotations.Nullable;
 
 public class MenuCoalPower extends AbstractContainerMenu {
 

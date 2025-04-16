@@ -6,7 +6,6 @@ import com.flying__8lack.items.ItemUnstableCreative;
 import com.flying__8lack.items.armor.ArmorTitaniumJumpkit;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SpawnEggItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;

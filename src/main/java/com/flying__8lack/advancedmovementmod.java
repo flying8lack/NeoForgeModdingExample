@@ -2,24 +2,13 @@ package com.flying__8lack;
 
 import com.flying__8lack.blocks.entity.ModBlockEntity;
 import com.flying__8lack.blocks.fluids.ModFluids;
-import com.flying__8lack.damage.ModDamageSource;
 import com.flying__8lack.effects.ModEffect;
 import com.flying__8lack.entity.ModEntity;
 import com.flying__8lack.gui.ModMenu;
 import com.flying__8lack.sound.ModSound;
 import com.flying__8lack.world.density.ModDensityFunction;
 import com.flying__8lack.world.structures.ModStructure;
-import net.minecraft.data.worldgen.SurfaceRuleData;
-import net.minecraft.world.damagesource.DamageSources;
-import net.minecraft.world.damagesource.DeathMessageType;
-import net.minecraft.world.level.levelgen.SurfaceRules;
-import net.minecraft.world.level.levelgen.SurfaceSystem;
-import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import org.slf4j.Logger;
-
 import com.mojang.logging.LogUtils;
-
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -34,6 +23,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(advancedmovementmod.MODID)

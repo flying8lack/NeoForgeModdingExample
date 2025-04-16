@@ -3,11 +3,11 @@ package com.flying__8lack.datagen;
 
 import com.flying__8lack.damage.ModDamageSource;
 import com.flying__8lack.world.biomes.ModBiomes;
-import com.flying__8lack.world.density.ModDensityFunction;
-import com.flying__8lack.world.dimensions.ModDimension;
 import com.flying__8lack.world.config.ModBiomeModifier;
 import com.flying__8lack.world.config.ModConfigFeature;
 import com.flying__8lack.world.config.ModPlacedFeature;
+import com.flying__8lack.world.density.ModDensityFunction;
+import com.flying__8lack.world.dimensions.ModDimension;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;

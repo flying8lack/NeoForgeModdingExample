@@ -15,7 +15,6 @@ import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.common.world.BiomeModifiers;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
-
 import java.util.List;
 
 import static com.flying__8lack.advancedmovementmod.MODID;
@@ -23,13 +22,26 @@ import static com.flying__8lack.advancedmovementmod.MODID;
 public class ModBiomeModifier {
 
     public static ResourceKey<BiomeModifier> ADD_POWER_ORE = registerKey("add_titanium_ore");
-    public static ResourceKey<BiomeModifier> ADD_CHEST_CIRCLE = registerKey("add_chest_circle");
+    public static ResourceKey<BiomeModifier> ADD_PAIN_LAKE = registerKey("add_pain_lake");
 
     public static ResourceKey<BiomeModifier> ADD_GRASS_WALKER = registerKey("add_grass_walker");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context){
         var PlacedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
+
+        context.register(ADD_PAIN_LAKE,
+                new BiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(
+                                biomes.getOrThrow(Biomes.FOREST),
+                                biomes.getOrThrow(Biomes.BADLANDS),
+                                biomes.getOrThrow(Biomes.DRIPSTONE_CAVES),
+                                biomes.getOrThrow(Biomes.SOUL_SAND_VALLEY)
+                        ),
+                        HolderSet.direct(PlacedFeatures.getOrThrow(ModPlacedFeature.PAIN_LAKE)),
+                        GenerationStep.Decoration.LAKES
+
+                ));
 
         context.register(ADD_POWER_ORE,
                 new BiomeModifiers.AddFeaturesBiomeModifier(

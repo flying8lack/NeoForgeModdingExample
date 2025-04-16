@@ -1,17 +1,9 @@
 package com.flying__8lack.world.density;
 
-import com.flying__8lack.util.ValueCache;
 import com.mojang.serialization.MapCodec;
-import net.minecraft.core.Holder;
 import net.minecraft.util.KeyDispatchDataCodec;
 import net.minecraft.util.Mth;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.levelgen.DensityFunction;
-import net.minecraft.world.level.levelgen.synth.PerlinNoise;
-import net.minecraft.world.level.levelgen.synth.PerlinSimplexNoise;
-import net.neoforged.neoforge.common.util.Lazy;
-
-import java.util.List;
 
 public class Level0DensityFunction implements DensityFunction {
 

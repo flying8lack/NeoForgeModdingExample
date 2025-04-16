@@ -20,10 +20,7 @@ import net.minecraft.world.level.levelgen.structure.pools.alias.PoolAliasLookup;
 import net.minecraft.world.level.levelgen.structure.structures.JigsawStructure;
 import net.minecraft.world.level.levelgen.structure.templatesystem.LiquidSettings;
 
-import java.lang.reflect.Type;
 import java.util.Optional;
-
-import static com.flying__8lack.advancedmovementmod.getLog;
 
 public class SupplierStructure extends Structure {
 

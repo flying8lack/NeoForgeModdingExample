@@ -1,11 +1,7 @@
 package com.flying__8lack.items.armor;
 
-import com.flying__8lack.advancedmovementmod;
 import com.flying__8lack.client.KeyResponse;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.core.Vec3i;
-import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -16,12 +12,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.jarjar.nio.util.Lazy;
-import net.neoforged.neoforge.common.ItemAbility;
-
-import java.util.function.Consumer;
-import java.util.function.Function;
 
 public class ArmorTitaniumJumpkit extends ArmorItem {
 

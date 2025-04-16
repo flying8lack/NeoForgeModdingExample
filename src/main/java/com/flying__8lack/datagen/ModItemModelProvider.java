@@ -1,6 +1,5 @@
 package com.flying__8lack.datagen;
 
-import com.flying__8lack.ModBlock;
 import com.flying__8lack.ModItem;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;

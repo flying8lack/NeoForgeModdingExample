@@ -6,10 +6,6 @@ import com.flying__8lack.cap.ModCap;
 import com.flying__8lack.entity.ModEntity;
 import com.flying__8lack.entity.custom.GrassWalkerMonsterEntity;
 import com.flying__8lack.entity.models.GrassWalkerMonsterModel;
-import com.flying__8lack.network.energy.EnergyNetwork;
-import com.flying__8lack.util.IDataSharing;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.SpawnPlacementType;
 import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -17,12 +13,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.GameShuttingDownEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
-import net.neoforged.neoforge.items.ItemStackHandler;
-import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 import static com.flying__8lack.advancedmovementmod.MODID;
 

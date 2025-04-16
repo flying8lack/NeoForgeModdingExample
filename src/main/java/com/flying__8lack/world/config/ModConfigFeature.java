@@ -7,8 +7,10 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.LakeFeature;
@@ -18,6 +20,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.TreeConfigurati
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.BendingTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -48,7 +51,10 @@ public class ModConfigFeature {
         register(context, PAIN_LAKE, Feature.LAKE,
                 new LakeFeature.Configuration(
                         BlockStateProvider.simple(ModFluids.LIQUID_PAIN_BLOCK.get().defaultBlockState()),
-                        BlockStateProvider.simple(Blocks.STONE)
+                        new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                                .add(Blocks.STONE.defaultBlockState(), 2)
+                                .add(Blocks.DIRT.defaultBlockState(), 1)
+                                .build())
                 )
 
         );

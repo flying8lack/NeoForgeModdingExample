@@ -1,8 +1,6 @@
 package com.flying__8lack.datagen;
 
 import com.flying__8lack.ModBlock;
-import com.flying__8lack.blocks.BlockThermiteDigger;
-import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;

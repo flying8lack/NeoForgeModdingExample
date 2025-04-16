@@ -1,15 +1,12 @@
 package com.flying__8lack.blocks;
 
-import com.flying__8lack.ModBlock;
 import com.flying__8lack.blocks.entity.BlockNodeEntity;
-import com.flying__8lack.blocks.entity.ModBlockEntity;
 import com.flying__8lack.network.energy.EnergyNetwork;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;

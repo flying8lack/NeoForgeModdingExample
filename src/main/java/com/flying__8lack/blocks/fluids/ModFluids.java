@@ -1,24 +1,19 @@
 package com.flying__8lack.blocks.fluids;
 
 import com.flying__8lack.ModBlock;
+import com.flying__8lack.blocks.BlockLiquidPain;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.level.material.FluidState;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.fluids.BaseFlowingFluid;
 import net.neoforged.neoforge.fluids.FluidType;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
-
-import java.util.function.Consumer;
-import java.util.function.Supplier;
 
 import static com.flying__8lack.advancedmovementmod.MODID;
 
@@ -47,7 +42,7 @@ public class ModFluids {
             () -> new LiquidPainFluid.Flowing(ModFluids.PAIN_PROP));
 
     public static final DeferredBlock<LiquidBlock> LIQUID_PAIN_BLOCK = ModBlock.BLOCKS.register("liquid_pain_block",
-            () -> new LiquidPainBlock(ModFluids.LIQUID_PAIN.get(), BlockBehaviour.Properties.of()));
+            () -> new BlockLiquidPain(ModFluids.LIQUID_PAIN.get(), BlockBehaviour.Properties.of()));
 
 
     public static final BaseFlowingFluid.Properties PAIN_PROP = new BaseFlowingFluid.Properties(
