@@ -13,9 +13,7 @@ import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
-
 import static com.flying__8lack.advancedmovementmod.MODID;
-
 import static com.flying__8lack.world.config.ModOrePlacement.commonOrePlacement;
 
 public class ModPlacedFeature {
