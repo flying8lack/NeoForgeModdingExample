@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.RootedDirtBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.LakeFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration;
@@ -43,7 +44,7 @@ public class ModConfigFeature {
     //CF -> PF -> BM
     public static ResourceKey<ConfiguredFeature<?, ?>> POWER_ORE = registerKey("titanium_ore");
     public static ResourceKey<ConfiguredFeature<?, ?>> PAIN_TREE = registerKey("pain_tree");
-    public static ResourceKey<ConfiguredFeature<?, ?>> PAIN_SPRING = registerKey("pain_spring");
+    public static ResourceKey<ConfiguredFeature<?, ?>> PAIN_LAKE = registerKey("pain_lake");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?,?>> context){
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -56,22 +57,29 @@ public class ModConfigFeature {
         register(context, POWER_ORE, Feature.ORE,
                 new OreConfiguration(world, 6));
 
-        register(context, PAIN_SPRING, Feature.SPRING, new SpringConfiguration(
-                ModFluids.LIQUID_PAIN.get().defaultFluidState(), true,
-                2, 4,
-                HolderSet.direct(
-                        Block::builtInRegistryHolder,
-                        Blocks.STONE,
-                        Blocks.GRANITE,
-                        Blocks.DIORITE,
-                        Blocks.ANDESITE,
-                        Blocks.DEEPSLATE,
-                        Blocks.TUFF,
-                        Blocks.CALCITE,
-                        Blocks.DIRT
+        register(context, PAIN_LAKE, Feature.LAKE,
+                new LakeFeature.Configuration(
+                        BlockStateProvider.simple(ModFluids.LIQUID_PAIN_BLOCK.get().defaultBlockState()),
+                        BlockStateProvider.simple(Blocks.STONE)
                 )
-                )
+
         );
+
+        //new SpringConfiguration(
+        //                ModFluids.LIQUID_PAIN.get().defaultFluidState(), true,
+        //                2, 4,
+        //                HolderSet.direct(
+        //                        Block::builtInRegistryHolder,
+        //                        Blocks.STONE,
+        //                        Blocks.GRANITE,
+        //                        Blocks.DIORITE,
+        //                        Blocks.ANDESITE,
+        //                        Blocks.DEEPSLATE,
+        //                        Blocks.TUFF,
+        //                        Blocks.CALCITE,
+        //                        Blocks.DIRT
+        //                )
+        //                )
 
         register(context, PAIN_TREE, Feature.TREE,
                 new TreeConfiguration.TreeConfigurationBuilder(
