@@ -8,9 +8,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
@@ -21,6 +19,8 @@ import static com.flying__8lack.world.config.ModOrePlacement.commonOrePlacement;
 
 public class ModPlacedFeature {
     public static final ResourceKey<PlacedFeature> POWER_ORE = registerKey("power_ore");
+    public static final ResourceKey<PlacedFeature> PAIN_SPRING = registerKey("pain_spring");
+
     public static void bootstrap(BootstrapContext<PlacedFeature> context){
         HolderGetter<ConfiguredFeature<?, ?>> holdergetter = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -29,6 +29,13 @@ public class ModPlacedFeature {
                 holdergetter.getOrThrow(ModConfigFeature.POWER_ORE),
                 commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.absolute(0),
                         VerticalAnchor.absolute(50))));
+
+        register(context, PAIN_SPRING,
+                holdergetter.getOrThrow(ModConfigFeature.PAIN_SPRING),
+                List.of(new PlacementModifier[]{CountPlacement.of(20), InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(60),
+                                VerticalAnchor.absolute(128)),
+                        BiomeFilter.biome()}));
 
     }
 
