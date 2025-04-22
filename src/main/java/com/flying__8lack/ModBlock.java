@@ -42,6 +42,9 @@ public class ModBlock {
     public static final DeferredBlock<Block> NODE_BLOCK = BLOCKS.register("node_block",
             () -> new BlockNode(BlockBehaviour.Properties.of()));
 
+    public static final DeferredBlock<Block> PIPE_BLOCK = BLOCKS.register("pipe_block",
+            () -> new BlockPipe(BlockBehaviour.Properties.of()));
+
     public static final DeferredBlock<SaplingBlock> PAIN_SAPLING = BLOCKS.register("pain_sapling_block",
             () -> new SaplingBlock(ModTreeGrower.PAIN_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 

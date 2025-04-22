@@ -1,10 +1,11 @@
-// 1.21.1	2025-04-16T00:39:17.9042162	Loot Tables
+// 1.21.1	2025-04-23T02:17:47.1454752	Loot Tables
 a578adddb68b5f0dc29c8267f9268bc704ac2f99 data/advancedmovementmod/loot_table/blocks/broken_block.json
 48998b711e0f3788bee400094f0b8ae7dc14a576 data/advancedmovementmod/loot_table/blocks/coal_power_block.json
 2a0b170bfc2e991e6f8981e8a9a6c17962e06c74 data/advancedmovementmod/loot_table/blocks/coal_processor_block.json
 a9b6661481400f844e70e5c13aa8443d1c0fe737 data/advancedmovementmod/loot_table/blocks/liquid_pain_block.json
 d8d39f5cfcda6344e71e21bb3df75cca503a15c9 data/advancedmovementmod/loot_table/blocks/node_block.json
 6a725033824cde6198b8717214e2a4931df3741f data/advancedmovementmod/loot_table/blocks/pain_sapling_block.json
+bcd370ad2cee0212e66fc976c2f0a26b9e8b4711 data/advancedmovementmod/loot_table/blocks/pipe_block.json
 35366358caf129aadb22df48e8e67098181ebae9 data/advancedmovementmod/loot_table/blocks/radar_block.json
 e20e12edb31a1d68237bfb5828639251ad0a0cab data/advancedmovementmod/loot_table/blocks/thermite_digger_block.json
 41473c223d83e9c917dccd5324d23a50fe47591d data/advancedmovementmod/loot_table/blocks/titanium_ore.json

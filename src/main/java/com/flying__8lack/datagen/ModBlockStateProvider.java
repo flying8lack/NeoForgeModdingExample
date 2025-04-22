@@ -21,6 +21,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlock.BROKEN_BLOCK);
         blockWithItem(ModBlock.RADAR_BLOCK);
         blockWithItem(ModBlock.COAL_POWER_BLOCK);
+        blockWithItem(ModBlock.PIPE_BLOCK);
 
 
 

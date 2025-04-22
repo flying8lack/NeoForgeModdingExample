@@ -26,6 +26,7 @@ public class ModBlockLootTable extends BlockLootSubProvider {
         dropSelf(ModBlock.COAL_POWER_BLOCK.get());
         dropSelf(ModBlock.NODE_BLOCK.get());
         dropSelf(ModBlock.PAIN_SAPLING.get());
+        dropSelf(ModBlock.PIPE_BLOCK.get());
 
         dropSelf(ModFluids.LIQUID_PAIN_BLOCK.get());
 

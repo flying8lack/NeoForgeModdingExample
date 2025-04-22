@@ -36,6 +36,10 @@ public class ModBlockEntity {
             "node_entity", () -> BlockEntityType.Builder.of(BlockNodeEntity::new,
                     ModBlock.NODE_BLOCK.get()).build(null));
 
+    public static final Supplier<BlockEntityType<BlockPipeEntity>> PIPE_ENTITY = BLOCK_ENTITY.register(
+            "pipe_entity", () -> BlockEntityType.Builder.of(BlockPipeEntity::new,
+                    ModBlock.PIPE_BLOCK.get()).build(null));
+
     public static void register(IEventBus bus){
         BLOCK_ENTITY.register(bus);
     }

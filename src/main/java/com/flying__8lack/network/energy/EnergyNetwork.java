@@ -13,7 +13,7 @@ import java.util.Optional;
 import java.util.TreeMap;
 
 /**
- * This class is responsible for representing networks. the network hold common data, such as energy storage API,
+ * This singleton class is responsible for representing networks in the world. the network hold common data, such as energy storage API,
  * which could be accessed by all members of the networks. All networks in the world are stored in the {@code Networks}
  * static field, to ensure common access and tracking across chunks.
  * <p>
@@ -46,6 +46,7 @@ public class EnergyNetwork {
                     return Optional.of(n);
                 }
                 if(m.getBlockPos().getCenter().distanceToSqr(pos.getCenter()) < 1.2){
+                    //Join network of adjacent pipes
                     n.member.put(pos, e);
                     return Optional.of(n);
                 }
@@ -54,6 +55,7 @@ public class EnergyNetwork {
 
 
         if(!e.getConnections().isEmpty()){
+            //if alone, create new network
             EnergyNetwork created = new EnergyNetwork(pos, e);
             Networks.add(created );
             return Optional.of(created);
@@ -78,7 +80,7 @@ public class EnergyNetwork {
      *
      * @param pos the location of the block entity to move.
      */
-    public void submergeNetwork(BlockPos pos){
+    public void forceIntoNetwork(BlockPos pos){
         if((Networks.isEmpty())){
             return;
         }
@@ -104,7 +106,7 @@ public class EnergyNetwork {
     public void inviteMember(BlockPos pos, BlockNodeEntity e){
 
         if(e.access().isPresent() && e.access().get() != this){
-            submergeNetwork(pos);
+            forceIntoNetwork(pos);
         } else {
             if(e.access().isEmpty()){
                 e.changeAccess(Optional.of(this));

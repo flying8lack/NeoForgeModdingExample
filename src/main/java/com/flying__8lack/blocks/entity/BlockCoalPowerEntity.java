@@ -1,6 +1,7 @@
 package com.flying__8lack.blocks.entity;
 
 import com.flying__8lack.gui.menus.MenuCoalPower;
+import com.flying__8lack.network.PipeNetwork;
 import com.flying__8lack.util.ICapProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -121,6 +122,8 @@ public class BlockCoalPowerEntity extends BlockEntity implements MenuProvider, I
         tag.putInt("processing_time", this.processing_time_left);
         tag.putBoolean("active", this.active);
     }
+
+
 
     @Override
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
