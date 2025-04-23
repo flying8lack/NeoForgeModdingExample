@@ -1,7 +1,9 @@
 package com.flying__8lack;
 
+import com.flying__8lack.attachment.ModAttachment;
 import com.flying__8lack.blocks.entity.ModBlockEntity;
 import com.flying__8lack.blocks.fluids.ModFluids;
+import com.flying__8lack.client.hud.BasicHUD;
 import com.flying__8lack.effects.ModEffect;
 import com.flying__8lack.entity.ModEntity;
 import com.flying__8lack.gui.ModMenu;
@@ -12,6 +14,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -20,7 +23,9 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.ClientHooks;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
@@ -84,6 +89,7 @@ public class advancedmovementmod
         ModFluids.register(modEventBus);
         ModDensityFunction.register(modEventBus);
         ModSound.register(modEventBus);
+        ModAttachment.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
 

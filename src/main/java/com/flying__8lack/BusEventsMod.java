@@ -15,23 +15,21 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.DirectionalPayloadHandler;
-import net.neoforged.neoforge.network.handling.MainThreadPayloadHandler;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
 import static com.flying__8lack.advancedmovementmod.MODID;
 
 @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD)
-public class BusEvents {
+public class BusEventsMod {
 
     @SubscribeEvent
     public static void RegisterPayload(final RegisterPayloadHandlersEvent event){
         final PayloadRegistrar register = event.registrar("1");
-        register.commonToClient(PlayerData.TYPE,
+        register.commonBidirectional(PlayerData.TYPE,
                 PlayerData.STREAM_CODEC,
                 new DirectionalPayloadHandler<>(
                         BasicHUD::handleClientData,
