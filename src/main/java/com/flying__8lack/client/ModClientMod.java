@@ -16,8 +16,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
-import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.neoforged.neoforge.client.event.*;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.client.settings.KeyConflictContext;
@@ -29,7 +28,9 @@ import org.lwjgl.glfw.GLFW;
 import static com.flying__8lack.advancedmovementmod.MODID;
 
 @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-public class ModClient {
+public class ModClientMod {
+
+
     public static final Lazy<KeyMapping> FLYING_MAPPING_BTN = Lazy.of(() -> new KeyMapping(
             "key."+MODID+".flying_mapping_btn", // Will be localized using this translation key
             KeyConflictContext.IN_GAME,
@@ -75,9 +76,14 @@ public class ModClient {
                 }
                 return fluidFogColor;
             }
+
+
         };
         event.registerFluidType(liquid_pain, ModFluids.CUSTOM_TYPE);
+
     }
+
+
 
     @SubscribeEvent
     public static void ClientSetUp(FMLClientSetupEvent event){
@@ -95,6 +101,7 @@ public class ModClient {
     public static void screenReg(RegisterMenuScreensEvent event){
         event.register(ModMenu.COAL_PROCESSOR.get(), ScreenCoalProcessor::new);
         event.register(ModMenu.COAL_POWER.get(), ScreenCoalPower::new);
+
     }
 
 

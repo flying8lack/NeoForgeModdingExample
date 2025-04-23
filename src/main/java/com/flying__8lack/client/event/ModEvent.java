@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.Optional;
 
 import static com.flying__8lack.advancedmovementmod.MODID;
-import static com.flying__8lack.client.ModClient.FLYING_MAPPING_BTN;
-import static com.flying__8lack.client.ModClient.JUMPKIT_ENABLED_BTN;
+import static com.flying__8lack.client.ModClientMod.FLYING_MAPPING_BTN;
+import static com.flying__8lack.client.ModClientMod.JUMPKIT_ENABLED_BTN;
 
 @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.GAME)
 public class ModEvent {
