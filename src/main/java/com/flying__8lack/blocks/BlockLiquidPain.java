@@ -36,7 +36,7 @@ public class BlockLiquidPain extends LiquidBlock {
             entity.hurt(new DamageSource(this.getDamageSource(level),
                     null, null, null), le.getMaxHealth()*0.14f);
             if(le instanceof ServerPlayer p){
-                BasicHUD.getInstance().addPower();
+                BasicHUD.getInstance().addPower(p);
                 BasicHUD.getInstance().SendData(p);
             }
         } else {
