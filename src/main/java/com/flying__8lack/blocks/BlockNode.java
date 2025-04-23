@@ -1,7 +1,7 @@
 package com.flying__8lack.blocks;
 
 import com.flying__8lack.blocks.entity.BlockNodeEntity;
-import com.flying__8lack.network.energy.EnergyNetwork;
+import com.flying__8lack.util.energy.EnergyNetwork;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;

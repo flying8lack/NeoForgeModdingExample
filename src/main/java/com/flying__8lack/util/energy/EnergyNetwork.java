@@ -1,4 +1,4 @@
-package com.flying__8lack.network.energy;
+package com.flying__8lack.util.energy;
 
 import com.flying__8lack.blocks.entity.BlockNodeEntity;
 import net.minecraft.core.BlockPos;
