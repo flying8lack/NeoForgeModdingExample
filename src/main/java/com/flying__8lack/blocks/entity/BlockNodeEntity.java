@@ -1,7 +1,7 @@
 package com.flying__8lack.blocks.entity;
 
 import com.flying__8lack.ModBlock;
-import com.flying__8lack.network.energy.EnergyNetwork;
+import com.flying__8lack.util.energy.EnergyNetwork;
 import com.flying__8lack.util.ICapProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
