@@ -2,19 +2,21 @@ package com.flying__8lack.client.hud;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.gui.screens.Overlay;
 
-public class BasicHUD extends Overlay{
+public class BasicHUD{
 
     private static final BasicHUD instance = new BasicHUD();
+
 
     public static BasicHUD getInstance() {
         return instance;
     }
 
-    @Override
-    public void render(GuiGraphics guiGraphics, int i, int i1, float v) {
-        guiGraphics.drawString(Minecraft.getInstance().font, "Hello World", 60, 60, 0xFF8000);
+
+    public void render(GuiGraphics guiGraphics) {
+        //screen size is 256 in X axis
+        //screen size is 256 in Y axis
+        guiGraphics.drawString(Minecraft.getInstance().font, "Hello World", 64, 64, 0x8C8069);
 
     }
 }
