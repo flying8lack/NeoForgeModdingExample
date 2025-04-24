@@ -33,7 +33,7 @@ import static com.flying__8lack.advancedmovementmod.getLog;
 
 public class BlockCoalPowerEntity extends BlockEntity implements MenuProvider, ICapProvider {
 
-    private final EnergyStorage storage = new EnergyStorage(1_000_000, 0, 6000);
+    private final EnergyStorage storage = new EnergyStorage(1_000_000);
 
     private final ItemStackHandler Input = new ItemStackHandler(1){
         @Override
@@ -136,6 +136,8 @@ public class BlockCoalPowerEntity extends BlockEntity implements MenuProvider, I
         if(tag.contains("energy")) {
             this.storage.deserializeNBT(registries, Objects.requireNonNull(tag.get("energy")));
         }
+
+        this.sync_data.set(2, storage.getEnergyStored());
     }
 
 
@@ -181,10 +183,10 @@ public class BlockCoalPowerEntity extends BlockEntity implements MenuProvider, I
             active = true;
             setChanged();
         }
-        if(energy != this.storage.getEnergyStored()) {
-            energy = this.storage.getEnergyStored();
-            setChanged();
-        }
+//        if(energy != this.storage.getEnergyStored()) {
+//            energy = this.storage.getEnergyStored();
+//            setChanged();
+//        }
 
 
 
