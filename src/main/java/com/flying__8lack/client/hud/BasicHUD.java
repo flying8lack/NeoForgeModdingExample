@@ -4,18 +4,15 @@ import com.flying__8lack.attachment.ModAttachment;
 import com.flying__8lack.network.PlayerData;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.player.Player;
 import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
-
-import static com.flying__8lack.advancedmovementmod.getLog;
 
 public class BasicHUD{
 
     private static final BasicHUD instance = new BasicHUD();
-    private static int power = 0;
+    private static int power = -1;
+    private boolean loaded = false;
 
 
     //this get called on the server side only for consistency
@@ -25,8 +22,12 @@ public class BasicHUD{
     }
 
     //send a custom packet to sync the power data between logical server and logical client
-    public void SendData(ServerPlayer p){
+    public static void SendData(ServerPlayer p){
         PacketDistributor.sendToPlayer(p, new PlayerData(p.getData(ModAttachment.PLAYER_POWER)));
+    }
+
+    public static void RequestData(){
+        PacketDistributor.sendToServer(new PlayerData(0));
     }
 
     public static BasicHUD getInstance() {
@@ -36,11 +37,10 @@ public class BasicHUD{
     //method to handle data from server
     public static void handleServerData(final PlayerData data, final IPayloadContext context){
         power = data.power();
+
     }
 
     public static void handleClientData(final PlayerData data, final IPayloadContext context){
-
-
 
     }
 
@@ -49,6 +49,7 @@ public class BasicHUD{
         //screen size is 512 in X axis
         //screen size is 512 in Y axis
         guiGraphics.drawString(Minecraft.getInstance().font, "Power: %d".formatted(power), 64, 64, 0x8C8069);
+
 
     }
 }
