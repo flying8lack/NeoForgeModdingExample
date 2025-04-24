@@ -45,7 +45,7 @@ public class PipeNetwork {
     }
 
     private BlockPos find(BlockPos pos){
-        makeSet(pos);
+
         while(parents.get(pos) != pos){
             parents.put(parents.get(pos), parents.get(parents.get(pos)));
             pos = parents.get(pos);
@@ -100,7 +100,7 @@ public class PipeNetwork {
         ranks.clear();
 
         for(BlockPos pos : points.keySet()){
-            find(pos);
+            makeSet(pos);
             for(BlockPos npos : points.get(pos).getConnections()){
                 union(pos, npos);
             }
