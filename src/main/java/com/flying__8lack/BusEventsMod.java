@@ -39,11 +39,11 @@ public class BusEventsMod {
     @SubscribeEvent
     public static void RegisterPayload(final RegisterPayloadHandlersEvent event){
         final PayloadRegistrar register = event.registrar("1");
-        register.commonBidirectional(PlayerData.TYPE,
+        register.playBidirectional(PlayerData.TYPE,
                 PlayerData.STREAM_CODEC,
                 new DirectionalPayloadHandler<>(
-                        BasicHUD::handleClientData,
-                        BasicHUD::handleServerData
+                        BasicHUD::handleServerData,
+                        BasicHUD::handleClientData
                 ));
     }
 

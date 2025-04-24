@@ -5,15 +5,17 @@ import com.flying__8lack.network.PlayerData;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
 import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
+
+import java.util.HashMap;
 
 public class BasicHUD{
 
     private static final BasicHUD instance = new BasicHUD();
     private static int power = -1;
-    private boolean loaded = false;
-
+    public static HashMap<String, Integer> PowerList = new HashMap<>();
 
     //this get called on the server side only for consistency
     public void addPower(ServerPlayer p){
@@ -22,7 +24,7 @@ public class BasicHUD{
     }
 
     //send a custom packet to sync the power data between logical server and logical client
-    public static void SendData(ServerPlayer p){
+    public void SendData(ServerPlayer p){
         PacketDistributor.sendToPlayer(p, new PlayerData(p.getData(ModAttachment.PLAYER_POWER)));
     }
 
@@ -41,7 +43,11 @@ public class BasicHUD{
     }
 
     public static void handleClientData(final PlayerData data, final IPayloadContext context){
-
+        context.enqueueWork(
+                () -> {
+                    context.reply(new PlayerData(-7274));
+                }
+        );
     }
 
     //the method that get called to render the gui (client only)
