@@ -2,17 +2,11 @@ package com.flying__8lack.world.density;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.util.KeyDispatchDataCodec;
-import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.levelgen.DensityFunction;
-import net.minecraft.world.level.levelgen.DensityFunctions;
-import net.minecraft.world.level.levelgen.WorldOptions;
-import net.minecraft.world.level.levelgen.synth.BlendedNoise;
 import net.minecraft.world.level.levelgen.synth.PerlinSimplexNoise;
 
 import java.util.List;
-
-import static net.minecraft.world.level.levelgen.DensityFunctions.blendDensity;
 
 public class SmoothLandDensityFunction implements DensityFunction {
 
