@@ -4,7 +4,8 @@
     "minecraft:forest",
     "minecraft:badlands",
     "minecraft:dripstone_caves",
-    "minecraft:soul_sand_valley"
+    "minecraft:soul_sand_valley",
+    "advancedmovementmod:unstable_biome"
   ],
   "features": "advancedmovementmod:pain_lake",
   "step": "lakes"

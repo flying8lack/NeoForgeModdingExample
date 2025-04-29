@@ -31,7 +31,7 @@ public class ModPlacedFeature {
 
         register(context, PAIN_LAKE,
                 holdergetter.getOrThrow(ModConfigFeature.PAIN_LAKE),
-                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(180), InSquarePlacement.spread(),
+                List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(64), InSquarePlacement.spread(),
                         PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
                         BiomeFilter.biome()}));
 

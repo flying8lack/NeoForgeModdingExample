@@ -36,7 +36,8 @@ public class ModBiomeModifier {
                                 biomes.getOrThrow(Biomes.FOREST),
                                 biomes.getOrThrow(Biomes.BADLANDS),
                                 biomes.getOrThrow(Biomes.DRIPSTONE_CAVES),
-                                biomes.getOrThrow(Biomes.SOUL_SAND_VALLEY)
+                                biomes.getOrThrow(Biomes.SOUL_SAND_VALLEY),
+                                biomes.getOrThrow(ModBiomes.UNSTABLE_BIOME)
                         ),
                         HolderSet.direct(PlacedFeatures.getOrThrow(ModPlacedFeature.PAIN_LAKE)),
                         GenerationStep.Decoration.LAKES
